@@ -6,14 +6,14 @@ public class Project_Jamilou_Attahirou
    public static void main(String[] args)
    {
       //Attributes
-      int policyNumber = "";
+      int policyNumber = 0;
       String providerName = "";
       String firstName = "";
       String lastName = "";
       int age = 0;
       String smokingStatu = "";
-      height = 0.0;
-      weight = 0.0;
+      double height = 0.0;
+      double weight = 0.0;
       
       
       //Scanner object
@@ -22,32 +22,45 @@ public class Project_Jamilou_Attahirou
       //Plolicy object
       Policy p = new Policy();
       
+      
+      //Getting User's Input
+      
       System.out.print("Please enter the Policy Number:");
-      policyNumber = keybaord.nextLine();
+      policyNumber = keyboard.nextInt();
+      p.setPolicyNumber(policyNumber);
       
       System.out.print("Please enter the Provider Name:");
-      providerName = keybaord.nextLine();
+      providerName = keyboard.nextLine();
+      p.setProviderName(providerName);
       
       System.out.print("Please enter the Policyholder's First Name:");
-      firstName = keybaord.nextLine();
+      firstName = keyboard.nextLine();
+      p.setFirstName(firstName);
       
       System.out.print("Please enter the Policyholder's Last Name:");
-      lastName = keybaord.nextLine();
+      lastName = keyboard.nextLine();
+      p.setLastName(lastName);
       
       System.out.print("Please enter the Policyholder's Age:");
-      age = keybaord.nextInt();
+      age = keyboard.nextInt();
+      p.setAge(age);
       
       System.out.print("Please enter the Policyholder's Smoking Statu:");
-      smokingStatu = keybaord.nextLine();
+      smokingStatu = keyboard.nextLine();
+      p.setSmokingStatu(smokingStatu);
       
       System.out.print("Please enter the Policyholder's height:");
-      height = keybaord.nextDouble();
+      height = keyboard.nextDouble();
+      p.setHeight(height);
       
       System.out.print("Please enter the Policyholder's weight:");
-      weight = keybaord.nextDouble();
+      weight = keyboard.nextDouble();
+      p.setWeight(weight);
+      
       
       //Clear the buffer
       keyboard.nextLine();
+      
       
       //OUTPUT
       System.out.println("Policy Number:" + p.getPolicyNumber());

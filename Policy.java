@@ -110,7 +110,7 @@ public class Policy
     return firstName;
    }
 
-   public String geLastNamet()
+   public String getLastName()
    {
     return lastName;
    }
