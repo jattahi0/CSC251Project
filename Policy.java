@@ -12,7 +12,7 @@ public class Policy
       Policyholder’s Weight (in pounds)
    */
 
-   private String policyNumber;
+   private int policyNumber;
    private String providerName;
    private String firstName;
    private String lastName;
@@ -26,7 +26,7 @@ public class Policy
    //no-arg constructor
    public Policy()
    {
-      policyNumber = "";
+      policyNumber = 0;
       providerName = "";
       firstName = "";
       lastName = "";
@@ -38,7 +38,7 @@ public class Policy
    
    
    //constructor that accepts arguments 
-   public Policy(String policyNumber, String providerName, String firstName, String lastName, int age, String smokingStatu, double height, double weight)
+   public Policy(int policyNumber, String providerName, String firstName, String lastName, int age, String smokingStatu, double height, double weight)
    {
       this.policyNumber = policyNumber;
       this.providerName = providerName;
@@ -52,7 +52,7 @@ public class Policy
    
    
    //Setter method
-    public void setPolicyNumber(String policyNumber)
+    public void setPolicyNumber(int policyNumber)
    {
     this.policyNumber = policyNumber;
    }
@@ -95,7 +95,7 @@ public class Policy
 
    //Getters method
 
-   public String getPolicyNumber()
+   public int getPolicyNumber()
    {
     return policyNumber;
    }
@@ -153,7 +153,7 @@ public class Policy
       {
          additionalFee = (BMI - 35) * 20;
          
-         if(smokingStatu == "Yes")
+         if(smokingStatu == "smoker")
          {
             additionalFee += additionalFee + 100;
             
