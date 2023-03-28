@@ -29,6 +29,9 @@ public class Project_Jamilou_Attahirou
       policyNumber = keyboard.nextInt();
       p.setPolicyNumber(policyNumber);
       
+      //Clear the buffer
+      keyboard.nextLine();
+      
       System.out.print("Please enter the Provider Name:");
       providerName = keyboard.nextLine();
       p.setProviderName(providerName);
@@ -45,6 +48,9 @@ public class Project_Jamilou_Attahirou
       age = keyboard.nextInt();
       p.setAge(age);
       
+      //Clear the buffer
+      keyboard.nextLine();
+      
       System.out.print("Please enter the Policyholder's Smoking Statu:");
       smokingStatu = keyboard.nextLine();
       p.setSmokingStatu(smokingStatu);
@@ -57,19 +63,23 @@ public class Project_Jamilou_Attahirou
       weight = keyboard.nextDouble();
       p.setWeight(weight);
       
-      
+            
       //Clear the buffer
       keyboard.nextLine();
       
       
       //OUTPUT
-      System.out.println("Policy Number:" + p.getPolicyNumber());
-      System.out.println("Provider Name:" + p.getProviderName());
-      System.out.println("Policyholder's First Name:" + p.getFirstName());
-      System.out.println("Policyholder's Last Name:" + p.getLastName());
-      System.out.println("Policyholder's Age:" + p.getAge());
-      System.out.println("Policyholder's Smoking Statu:" + p.getSmokingStatu());
-      System.out.println("Policyholder's Height:" + p.getHeight());
-      System.out.println("Policyholder's Weight:" + p.getWeight());
+      System.out.println();
+      System.out.println();
+      System.out.println("Policy Number: " + p.getPolicyNumber());
+      System.out.println("Provider Name: " + p.getProviderName());
+      System.out.println("Policyholder's First Name: " + p.getFirstName());
+      System.out.println("Policyholder's Last Name: " + p.getLastName());
+      System.out.println("Policyholder's Age: " + p.getAge());
+      System.out.println("Policyholder's Smoking Statu: " + p.getSmokingStatu());
+      System.out.println("Policyholder's Height: " + p.getHeight());
+      System.out.println("Policyholder's Weight: " + p.getWeight());
+      System.out.println("Policyholder's BMI: " + p.BMI(height, weight));
+      System.out.println("Policy Price: " + p.insurancePrice(age, smokingStatu, p.BMI(height, weight)));
    }
 }

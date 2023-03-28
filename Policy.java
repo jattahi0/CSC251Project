@@ -21,8 +21,7 @@ public class Policy
    private double height;
    private double weight;
    
-   public double BMI;
-   
+      
    //no-arg constructor
    public Policy()
    {
@@ -134,7 +133,8 @@ public class Policy
    {
      return weight;
    }
-
+   
+   
 
    //Method That calculate the BMI
    public double BMI(double height, double weight)
