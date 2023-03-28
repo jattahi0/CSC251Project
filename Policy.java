@@ -141,5 +141,38 @@ public class Policy
    {
        return (weight * 703) / (height * height);     
    }
+   
+   //Method that calculate and return the prrice of the issurance
+   public double insurancePrice(int age, String smokingStatu, double BMI)
+   {
+      final double BASE_FEE = 600.0;
+      double additionalFee = 0.0; 
+      double finalFee = 0.0;
+      
+      if(BMI > 35)
+      {
+         additionalFee = (BMI - 35) * 20;
+         
+         if(smokingStatu == "Yes")
+         {
+            additionalFee += additionalFee + 100;
+            
+            if(age > 50)
+            {
+               additionalFee += additionalFee + 75;
+            }
+         }
+      }
+      else
+      {
+         finalFee = BASE_FEE;
+      }
+      
+      finalFee = BASE_FEE + additionalFee;
+      return finalFee;
+      
+   }
+
+
 
 }
